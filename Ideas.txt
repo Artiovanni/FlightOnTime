@@ -1,3 +1,9 @@
-Podemos adicionar um campo sobre o numero do voo sendo ele atuando como uma chave primaria.
+Podemos adicionar um campo sobre o número do voo, sendo ele atuando como uma 
+chave primária.
 
-Assim evitamos que haja voos duplicados no sistema, e facilitamos na hora de mostrar as pesquisas do dia.
+Benefícios:
+• Evitar voos duplicados no sistema
+• Facilitar a exibição das pesquisas do dia
+• Melhorar a organização e integridade dos dados
+
+
