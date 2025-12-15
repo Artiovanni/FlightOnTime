@@ -332,8 +332,9 @@ class FlightPredictionRequestDTOTest {
         @DisplayName("Should accept present departure date")
         void shouldAcceptPresentDepartureDate() {
             // Arrange
+            // Use plusSeconds(1) to avoid timing issues with @FutureOrPresent validation
             FlightPredictionRequestDTO dto = createValidDTOBuilder()
-                    .flightDepartureDate(LocalDateTime.now())
+                    .flightDepartureDate(LocalDateTime.now().plusSeconds(1))
                     .build();
 
             // Act
@@ -347,8 +348,10 @@ class FlightPredictionRequestDTOTest {
         @DisplayName("Should reject departure date more than 365 days in future")
         void shouldRejectTooFarFutureDepartureDate() {
             // Arrange
+            // Use 370 days to ensure we're clearly over the 365 day limit
+            // (ChronoUnit.DAYS.between truncates, so 366 days minus a few hours might be 365)
             FlightPredictionRequestDTO dto = createValidDTOBuilder()
-                    .flightDepartureDate(LocalDateTime.now().plusDays(366))
+                    .flightDepartureDate(LocalDateTime.now().plusDays(370))
                     .build();
 
             // Act
@@ -356,6 +359,8 @@ class FlightPredictionRequestDTOTest {
 
             // Assert
             assertThat(violations).isNotEmpty();
+            assertThat(violations).extracting("message")
+                    .anyMatch(msg -> msg.toString().contains("365 days"));
         }
     }
 

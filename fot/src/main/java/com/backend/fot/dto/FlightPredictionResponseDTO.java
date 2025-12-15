@@ -11,6 +11,8 @@ import lombok.Builder;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;
 
+import java.util.Locale;
+
 /**
  * Immutable DTO for flight delay prediction responses.
  * Thread-safe and includes prediction confidence metrics.
@@ -71,7 +73,7 @@ public class FlightPredictionResponseDTO {
      * Returns a formatted probability string with percentage.
      */
     public String getFormattedProbability() {
-        return probability != null ? String.format("%.2f%%", getProbabilityPercentage()) : "N/A";
+        return probability != null ? String.format(Locale.US, "%.2f%%", getProbabilityPercentage()) : "N/A";
     }
 
     /**

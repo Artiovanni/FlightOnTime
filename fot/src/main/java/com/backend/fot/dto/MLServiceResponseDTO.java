@@ -133,7 +133,7 @@ public class MLServiceResponseDTO {
         ConfidenceLevel level = getConfidenceLevel();
         
         String summary = String.format("ML Prediction: %s with %s confidence (%s)",
-                pred, confidenceStr, level.name());
+                pred.name(), confidenceStr, level.name());
         
         if (modelVersion != null) {
             summary += String.format(" [Model: %s]", modelVersion);
