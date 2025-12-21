@@ -1,6 +1,32 @@
 version: '3.8'
 
 services:
+  # Flask ML Wrapper - Integration layer between Java API and ML Service
+  ml-wrapper:
+    build:
+      context: ./mlwrapper
+      dockerfile: Dockerfile
+    container_name: ml-wrapper
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+      - PORT=5000
+      - ML_SERVICE_URL=http://ml-service:8000/predict
+      - ML_SERVICE_TIMEOUT=30
+      - LOG_LEVEL=INFO
+    networks:
+      - fot-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:5000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Java Spring Boot API - Main backend
   fot-api:
     build:
       context: ./fot
@@ -11,9 +37,32 @@ services:
       - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=prod
+      - ML_SERVICE_URL=http://ml-wrapper:5000/predict
+      - ML_SERVICE_TIMEOUT=5000
+    depends_on:
+      ml-wrapper:
+        condition: service_healthy
     networks:
       - fot-network
 
+  # Mock ML Service (for testing without real ML service)
+  # Comment out or remove when using real ML service
+  ml-service:
+    image: python:3.11-slim
+    container_name: ml-service-mock
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    working_dir: /app
+    volumes:
+      - ./mock_ml_service.py:/app/mock_ml_service.py
+    command: sh -c "pip install flask && python mock_ml_service.py"
+    networks:
+      - fot-network
+    profiles:
+      - mock
+
+  # Test runner for Java API
   fot-tests:
     image: maven:3.9-eclipse-temurin-17
     container_name: fot-tests
@@ -21,6 +70,19 @@ services:
     volumes:
       - ./fot:/app
     command: mvn test
+    networks:
+      - fot-network
+    profiles:
+      - test
+
+  # Test runner for Flask Wrapper
+  ml-wrapper-tests:
+    build:
+      context: ./mlwrapper
+      dockerfile: Dockerfile
+    container_name: ml-wrapper-tests
+    working_dir: /app
+    command: pytest -v
     networks:
       - fot-network
     profiles:

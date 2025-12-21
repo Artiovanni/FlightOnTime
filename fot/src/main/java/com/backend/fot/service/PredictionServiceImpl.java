@@ -1,24 +1,30 @@
 package com.backend.fot.service;
 
+import com.backend.fot.client.MLServiceClient;
 import com.backend.fot.dto.FlightPredictionRequestDTO;
 import com.backend.fot.dto.FlightPredictionResponseDTO;
+import com.backend.fot.dto.MLServiceResponseDTO;
 import com.backend.fot.enums.FlightPrediction;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 /**
  * Implementation of PredictionService for flight delay predictions.
+ * Integrates with Flask ML Wrapper service for ML-based predictions.
  * 
  * @author FlightOnTime Team
- * @version 1.0
+ * @version 2.0
  * @since 2025-12-17
  */
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class PredictionServiceImpl implements PredictionService {
+
+    private final MLServiceClient mlServiceClient;
 
     /**
      * Predicts flight delay using ML service.
@@ -30,48 +36,28 @@ public class PredictionServiceImpl implements PredictionService {
     public FlightPredictionResponseDTO predictDelay(FlightPredictionRequestDTO request) {
         log.info("Processing prediction for flight {}", request.getFlightNumber());
 
-        FlightPrediction prediction = determinePrediction(request);
-        Double probability = calculateProbability(request);
+        try {
+            // Call Flask ML Wrapper
+            MLServiceResponseDTO mlResponse = mlServiceClient.predict(request);
+            
+            // Convert ML service response to API response
+            FlightPrediction prediction = mlResponse.getPredictionEnum();
+            BigDecimal probability = mlResponse.getConfidence();
+            
+            log.info("Prediction result from ML service: {} with probability {}", 
+                    prediction, probability);
 
-        log.debug("Prediction result: {} with probability {}", prediction, probability);
-
-        return FlightPredictionResponseDTO.builder()
-                .prediction(prediction)
-                .probability(probability)
-                .confidence(determineConfidenceLevel(probability))
-                .build();
-    }
-
-    /**
-     * @param request Flight information
-     * @return Predicted status (ON_TIME or DELAYED)
-     */
-    private FlightPrediction determinePrediction(FlightPredictionRequestDTO request) {
-        int distance = request.getFlightDistance();
-
-        if (distance > 1000) {
-            return FlightPrediction.DELAYED;
-        } else {
-            return FlightPrediction.ON_TIME;
+            return FlightPredictionResponseDTO.builder()
+                    .prediction(prediction)
+                    .probability(probability.doubleValue())
+                    .confidence(determineConfidenceLevel(probability.doubleValue()))
+                    .build();
+                    
+        } catch (MLServiceClient.MLServiceException e) {
+            log.error("ML service error for flight {}: {}", 
+                    request.getFlightNumber(), e.getMessage());
+            throw new RuntimeException("Failed to get prediction from ML service", e);
         }
-    }
-
-    /**
-     * Calculates prediction probability.
-     * 
-     * @param request Flight information
-     * @return Probability value between 0.0 and 1.0
-     */
-    private Double calculateProbability(FlightPredictionRequestDTO request) {
-        int distance = request.getFlightDistance();
-
-        double baseProbability = 0.5;
-        double distanceFactor = Math.min(distance / 5000.0, 0.45);
-
-        BigDecimal probability = BigDecimal.valueOf(baseProbability + distanceFactor)
-                .setScale(2, RoundingMode.HALF_UP);
-
-        return probability.doubleValue();
     }
 
     /**

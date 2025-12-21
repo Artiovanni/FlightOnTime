@@ -1,0 +1,64 @@
+version: '3.8'
+
+# Development docker-compose for local development with hot-reload
+services:
+  ml-wrapper-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ml-wrapper-dev
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=True
+      - PORT=5000
+      - ML_SERVICE_URL=http://ml-service-mock:8000/predict
+      - ML_SERVICE_TIMEOUT=30
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ./app:/app/app
+      - ./tests:/app/tests
+    command: python run.py
+    networks:
+      - dev-network
+
+  # Mock ML Service for development
+  ml-service-mock:
+    image: python:3.11-slim
+    container_name: ml-service-mock-dev
+    ports:
+      - "8000:8000"
+    working_dir: /app
+    command: >
+      sh -c "pip install flask &&
+             python -c \"
+from flask import Flask, request, jsonify
+import random
+
+app = Flask(__name__)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.get_json()
+    print(f'Mock ML Service received: {data}')
+    result = {
+        'prediction': random.randint(0, 1),
+        'probability': round(random.uniform(0.5, 0.99), 2)
+    }
+    print(f'Mock ML Service returning: {result}')
+    return jsonify(result)
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({'status': 'UP'})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8000, debug=True)
+             \""
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    driver: bridge

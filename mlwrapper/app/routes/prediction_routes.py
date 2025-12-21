@@ -49,7 +49,7 @@ def predict():
     Response (format expected by Java API):
     {
         "prediction": 1,        # 0 = ON_TIME, 1 = DELAYED
-        "probability": 0.85     # Prediction confidence (0.0 - 1.0)
+        "confidence": 0.85      # Prediction confidence (0.0 - 1.0)
     }
     """
 
@@ -70,11 +70,19 @@ def predict():
 
         # 3. Forward to external ML service
         logger.info("Forwarding to external ML service...")
-        result = ml_client.predict(validated_data.model_dump())
+        ml_result = ml_client.predict(validated_data.model_dump())
 
-        # 4. Return result in format expected by Java API
-        logger.info(f"Returning result to Java API: {result}")
-        return jsonify(result), 200
+        # 4. Map ML service response to Java API format
+        # ML service returns: {"prediction": 0/1, "probability": 0.85}
+        # Java API expects: {"prediction": 0/1, "confidence": 0.85}
+        response = {
+            "prediction": ml_result.get("prediction"),
+            "confidence": ml_result.get("probability")  # Map probability -> confidence
+        }
+
+        # 5. Return result in format expected by Java API
+        logger.info(f"Returning result to Java API: {response}")
+        return jsonify(response), 200
 
     except ValidationError as e:
         logger.warning(f"Validation error: {e}")
