@@ -1,7 +1,5 @@
-pandas
-numpy
-scikit-learn
-catboost
-matplotlib
-seaborn
-openpyxl
+flask
+pandas==2.2.2
+numpy==2.0.2
+joblib==1.5.3
+scikit-learn==1.6.1
