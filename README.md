@@ -628,7 +628,7 @@ curl -X POST http://localhost:8080/api/v1/predict \
     "companyName": "AZ",
     "flightOrigin": "GIG",
     "flightDestination": "GRU",
-    "flightDepartureDate": "2025-12-20T14:30:00Z",
+    "flightDepartureDate": "2025-12-20T14:30:00",
     "flightDistance": 350
   }'
 ```

@@ -122,7 +122,7 @@
 			"response": []
 		},
 		{
-			"name": "Predict delay Copy",
+			"name": "Predict delay (sem pre-script)",
 			"event": [
 				{
 					"listen": "prerequest",
