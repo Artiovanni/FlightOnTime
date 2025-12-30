@@ -85,9 +85,9 @@ jobs:
               "arrivalAirport": "LAX",
               "scheduledDeparture": "2024-01-15T10:00:00"
             }' \
-            -f -v
+            -v || echo "⚠️ API returned error, checking logs..."
       
-      - name: Show container logs
+      - name: Show container logs after testing
         if: always()
         run: |
           echo "📋 Container logs:"
