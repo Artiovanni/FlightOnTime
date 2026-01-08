@@ -123,8 +123,9 @@ def predict():
 
         return jsonify({
             'prediction': int(prediction),
+            'probability': proba,  # Usar 'probability' para compatibilidade com o wrapper
             'previsao': "ATRASADO" if prediction == 1 else "NO HORÁRIO",
-            'probabilidade': proba,
+            'probabilidade': proba,  # Manter também em português para compatibilidade
             'status': 'success'
         })
 

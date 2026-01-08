@@ -47,15 +47,27 @@ Cliente → Java API (valida) → Flask ML (integra) → ML Model (prevê) → R
 
 ## 🚀 Quick Start (30 segundos)
 
-### Execute agora:
+### Opção 1: Rodar tudo com Frontend
 
 ```bash
 # 1. Clone
 git clone https://github.com/Mateus-Redivo/FlightOnTime.git
 cd FlightOnTime
 
-# 2. Suba os 3 containers Docker
-docker compose --profile mock up -d
+# 2. Suba TODOS os containers (Backend + ML + Frontend)
+docker compose up -d
+
+# 3. Acesse no navegador:
+# 🌐 Frontend: http://localhost:3000
+# 📚 Swagger API: http://localhost:8080/swagger-ui.html
+# 🔌 API Direta: http://localhost:8080/api/v1/predict
+```
+
+### Opção 2: Apenas API (sem Frontend)
+
+```bash
+# Suba apenas backend e ML
+docker compose up -d fot-api ml-wrapper modelos-ml
 
 # 3. Teste a API
 curl -X POST http://localhost:8080/api/v1/predict \

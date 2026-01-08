@@ -40,25 +40,37 @@
             <form id="predict-form">
                 <div class="form-grid">
                     <div class="form-group">
+                        <label>Número do Voo</label>
+                        <input type="text" name="flightNumber" placeholder="Ex: LA4001" required>
+                    </div>
+                    <div class="form-group">
                         <label>Companhia Aérea</label>
-                        <select required>
+                        <select name="companyName" required>
                             <option value="">Selecione...</option>
-                            <option>Latam</option>
-                            <option>Azul</option>
-                            <option>Gol</option>
+                            <option value="LA">LATAM</option>
+                            <option value="AD">Azul</option>
+                            <option value="G3">Gol</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Aeroporto de Origem</label>
-                        <input type="text" placeholder="Ex: GRU" required>
+                        <input type="text" name="flightOrigin" placeholder="Ex: GRU" maxlength="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Aeroporto de Destino</label>
+                        <input type="text" name="flightDestination" placeholder="Ex: GIG" maxlength="3" required>
                     </div>
                     <div class="form-group">
                         <label>Data do Voo</label>
-                        <input type="date" required>
+                        <input type="date" name="flightDate" required>
                     </div>
                     <div class="form-group">
                         <label>Horário Previsto</label>
-                        <input type="time" required>
+                        <input type="time" name="flightTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Distância (km)</label>
+                        <input type="number" name="flightDistance" placeholder="Ex: 358" min="1" required>
                     </div>
                 </div>
                 
