@@ -46,7 +46,7 @@ class TestPredictEndpoint:
             assert response.status_code == 200
             data = response.get_json()
             assert data['prediction'] == 1
-            assert data['confidence'] == 0.85  # Fixed: should be 'confidence' not 'probability'
+            assert data['confidence'] == 0.85
 
     def test_predict_empty_body(self, client):
         """Test prediction with empty request body"""
@@ -98,7 +98,8 @@ class TestPredictEndpoint:
 
         with patch('app.routes.prediction_routes.get_client') as mock_get_client:
             mock_ml_client = MagicMock()
-            mock_ml_client.predict.side_effect = Exception("ML service unavailable")
+            mock_ml_client.predict.side_effect = Exception(
+                "ML service unavailable")
             mock_get_client.return_value = mock_ml_client
 
             response = client.post('/predict', json={
@@ -164,7 +165,7 @@ class TestHealthEndpoint:
 
             assert response.status_code == 200
             data = response.get_json()
-            assert data['status'] == 'UP'
+            assert data['status'] == 'HEALTHY'
             assert data['service'] == 'Flask ML Wrapper'
 
     def test_health_check_degraded(self, client):
@@ -191,7 +192,8 @@ class TestHealthEndpoint:
 
         with patch('app.routes.prediction_routes.get_client') as mock_get_client:
             mock_ml_client = MagicMock()
-            mock_ml_client.health_check.side_effect = Exception("Unexpected error")
+            mock_ml_client.health_check.side_effect = Exception(
+                "Unexpected error")
             mock_get_client.return_value = mock_ml_client
 
             response = client.get('/health')
