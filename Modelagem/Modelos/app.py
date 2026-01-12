@@ -16,7 +16,7 @@ model = None
 
 # --- 2.1 CONFIGURAÇÕES ADICIONAIS ---
 #  SUBSTITUA PELA SUA CHAVE REAL
-OPENWEATHER_API_KEY = "a4539723e0fe2518eadca7ec30d7cd36"
+OPENWEATHER_API_KEY = "SUA_CHAVE_AQUI"
 # Carrega base de dados de aeroportos (IATA -> Cidade/País)
 print("--- CARREGANDO DADOS DE AEROPORTOS ---")
 try:
