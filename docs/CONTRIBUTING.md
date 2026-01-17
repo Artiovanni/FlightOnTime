@@ -26,6 +26,7 @@ git checkout -b fix/issue-123
 ```
 
 **Convenções de nomenclatura de branches:**
+
 - `feature/` - Novas funcionalidades
 - `fix/` - Correções de bugs
 - `docs/` - Alterações na documentação
@@ -34,7 +35,7 @@ git checkout -b fix/issue-123
 
 ### 3. Faça Suas Alterações
 
-#### Antes de fazer commit:
+#### Antes de fazer commit
 
 ```bash
 # Execute os testes
@@ -49,7 +50,7 @@ docker compose --profile mock up -d
 
 Siga [Conventional Commits](https://www.conventionalcommits.org/):
 
-```
+```text
 feat: adiciona novo endpoint de predição
 fix: corrige validação de IATA
 docs: atualiza README com exemplos
@@ -77,7 +78,15 @@ Então crie um Pull Request no GitHub preenchendo o template.
 ### Testes Python
 
 - **Localização:** `mlwrapper/tests/`
-- **Executar:** `cd mlwrapper && pytest --cov=app`
+
+- **Executar:**
+
+  ```bash
+  cd mlwrapper
+  pip install -r requirements.txt  # Instalar dependências primeiro
+  pytest --cov=app
+  ```
+
 - **Cobertura mínima:** 75%
 
 ### Testes Docker
@@ -145,4 +154,4 @@ Ao sugerir funcionalidades, inclua:
 
 ---
 
-**Obrigado por contribuir com o FlightOnTime! 🚀✈️**
+### Obrigado por contribuir com o FlightOnTime! 🚀✈️

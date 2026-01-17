@@ -2,10 +2,10 @@
 
 ## 📑 Índice
 
-* [Estrutura do Projeto](https://www.google.com/search?q=%23estrutura-do-projeto)
-* [Funcionamento das Telas](https://www.google.com/search?q=%23funcionamento-das-telas)
-* [Logica do Script.js](https://www.google.com/search?q=%23script)
-* [Tecnologias Utilizadas](https://www.google.com/search?q=%23tecnologias-utilizadas)
+* [Estrutura do Projeto](#-estrutura-do-projeto)
+* [Funcionamento das Telas](#-funcionamento-das-telas)
+* [Lógica do Script.js](#-lógica-do-scriptjs)
+* [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 
 ---
 

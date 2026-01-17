@@ -1,18 +1,18 @@
 # Framework Web
 Flask==3.0.0
-Flask-CORS==4.0.0
+Flask-CORS==6.0.0
 
 # Ambiente e Configuração
 python-dotenv==1.0.0
 
 # Cliente HTTP para chamar serviço ML externo
-requests==2.31.0
+requests==2.32.4
 
 # Validação e Serialização
 pydantic==2.5.0
 
 # Servidor de Produção
-gunicorn==21.2.0
+gunicorn==22.0.0
 
 # Testes
 pytest==7.4.3

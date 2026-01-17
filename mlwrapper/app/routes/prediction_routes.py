@@ -109,7 +109,8 @@ def predict():
         # Java API expects: {"prediction": 0/1, "confidence": 0.85}
         response = {
             "prediction": ml_result.get("prediction"),
-            "confidence": ml_result.get("probability")  # Map probability -> confidence
+            # Map probability -> confidence
+            "confidence": ml_result.get("probability")
         }
 
         # 5. Return result in format expected by Java API
@@ -146,14 +147,14 @@ def health():
         ml_client = get_client()  # Use dependency injection
         ml_status = ml_client.health_check()
 
-        wrapper_status = "UP" if ml_status.get(
+        wrapper_status = "HEALTHY" if ml_status.get(
             "status") == "UP" else "DEGRADED"
 
         return jsonify({
             "status": wrapper_status,
             "service": "Flask ML Wrapper",
             "ml_service": ml_status
-        }), 200 if wrapper_status == "UP" else 503
+        }), 200 if wrapper_status == "HEALTHY" else 503
 
     except Exception as e:
         logger.error(f"Health check failed: {e}")

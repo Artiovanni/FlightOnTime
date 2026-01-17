@@ -54,3 +54,10 @@ logs/
 *.tmp
 *.temp
 .cache/
+
+### ML Models (managed via GitHub Releases) ###
+*.pkl
+*.joblib
+*.h5
+*.pth
+*.onnx

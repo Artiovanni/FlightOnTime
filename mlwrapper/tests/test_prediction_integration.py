@@ -24,7 +24,7 @@ import requests
 class TestPredictionEndpointIntegration:
     """
     Integration tests for POST /predict endpoint.
-    
+
     Tests the complete flow:
     Client -> Flask App -> Routes -> Services -> (Mocked) ML Service
     """
@@ -33,22 +33,22 @@ class TestPredictionEndpointIntegration:
     def app(self):
         """
         Create and configure a test Flask application instance.
-        
+
         Fixture pattern: provides isolated app for each test.
         """
         from app import create_app
-        
+
         app = create_app()
         app.config['TESTING'] = True
         app.config['DEBUG'] = False
-        
+
         return app
 
     @pytest.fixture
     def client(self, app):
         """
         Create test client for making HTTP requests.
-        
+
         Uses Flask's test_client which simulates HTTP without real network.
         """
         return app.test_client()
@@ -57,10 +57,11 @@ class TestPredictionEndpointIntegration:
     def valid_flight_payload(self) -> dict:
         """
         Provide a valid flight prediction request payload.
-        
+
         Fixture pattern: reusable test data.
         """
-        future_date = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%S")
+        future_date = (datetime.now() + timedelta(days=1)
+                       ).strftime("%Y-%m-%dT%H:%M:%S")
         return {
             "flightNumber": "AZ1234",
             "companyName": "AZ",
@@ -75,7 +76,8 @@ class TestPredictionEndpointIntegration:
         """Mock ML service response for ON_TIME prediction."""
         return {
             "prediction": 0,
-            "probability": 0.85
+            "probabilidade": 0.85,
+            "status": "success"
         }
 
     @pytest.fixture
@@ -83,7 +85,8 @@ class TestPredictionEndpointIntegration:
         """Mock ML service response for DELAYED prediction."""
         return {
             "prediction": 1,
-            "probability": 0.92
+            "probabilidade": 0.92,
+            "status": "success"
         }
 
     # ==================== SUCCESS SCENARIOS ====================
@@ -98,7 +101,7 @@ class TestPredictionEndpointIntegration:
     ):
         """
         Integration Test: Complete prediction flow for ON_TIME result.
-        
+
         Given: Valid flight data and ML service returns ON_TIME prediction
         When: POST /predict is called
         Then: Should return 200 with correct prediction response
@@ -123,11 +126,12 @@ class TestPredictionEndpointIntegration:
         assert 'prediction' in data, "Response should contain 'prediction' field"
         assert 'probability' in data or 'confidence' in data, \
             "Response should contain probability/confidence"
-        
+
         # Assert - ML Client was called with correct data
         mock_predict.assert_called_once()
         call_args = mock_predict.call_args[0][0]
-        assert call_args.get('flightNumber') == valid_flight_payload['flightNumber']
+        assert call_args.get(
+            'flightNumber') == valid_flight_payload['flightNumber']
 
     @patch('app.services.ml_client.MLServiceClient.predict')
     def test_predict_endpoint_returns_delayed_prediction(
@@ -139,7 +143,7 @@ class TestPredictionEndpointIntegration:
     ):
         """
         Integration Test: Complete prediction flow for DELAYED result.
-        
+
         Given: Valid flight data and ML service returns DELAYED prediction
         When: POST /predict is called
         Then: Should return 200 with DELAYED prediction
@@ -169,7 +173,7 @@ class TestPredictionEndpointIntegration:
     ):
         """
         Integration Test: Verify response Content-Type header.
-        
+
         Given: Valid request
         When: POST /predict is called
         Then: Response should have Content-Type: application/json
@@ -193,7 +197,7 @@ class TestPredictionEndpointIntegration:
     def test_predict_endpoint_missing_required_field_returns_400(self, client):
         """
         Integration Test: Validation error for missing required field.
-        
+
         Given: Payload missing 'flightNumber' field
         When: POST /predict is called
         Then: Should return 400 Bad Request with validation error
@@ -221,7 +225,7 @@ class TestPredictionEndpointIntegration:
     def test_predict_endpoint_invalid_json_returns_400(self, client):
         """
         Integration Test: Handle malformed JSON gracefully.
-        
+
         Given: Malformed JSON in request body
         When: POST /predict is called
         Then: Should return 400 Bad Request
@@ -243,7 +247,7 @@ class TestPredictionEndpointIntegration:
     def test_predict_endpoint_empty_body_returns_400(self, client):
         """
         Integration Test: Handle empty request body.
-        
+
         Given: Empty request body
         When: POST /predict is called
         Then: Should return 400 Bad Request
@@ -262,7 +266,7 @@ class TestPredictionEndpointIntegration:
     def test_predict_endpoint_invalid_distance_returns_400(self, client):
         """
         Integration Test: Validation error for invalid flight distance.
-        
+
         Given: Payload with negative flight distance
         When: POST /predict is called
         Then: Should return 400 with validation error
@@ -299,7 +303,7 @@ class TestPredictionEndpointIntegration:
     ):
         """
         Integration Test: Handle ML service timeout gracefully.
-        
+
         Given: ML service times out
         When: POST /predict is called
         Then: Should return 503 Service Unavailable or 500
@@ -328,14 +332,15 @@ class TestPredictionEndpointIntegration:
     ):
         """
         Integration Test: Handle ML service connection failure.
-        
+
         Given: Cannot connect to ML service
         When: POST /predict is called
         Then: Should return 503 or appropriate error code
         """
         # Arrange
         from app.exceptions import MLServiceConnectionError
-        mock_predict.side_effect = MLServiceConnectionError("Connection refused")
+        mock_predict.side_effect = MLServiceConnectionError(
+            "Connection refused")
 
         # Act
         response = client.post(
@@ -353,7 +358,7 @@ class TestPredictionEndpointIntegration:
     def test_health_endpoint_returns_200(self, client):
         """
         Integration Test: Health check endpoint.
-        
+
         Given: Application is running
         When: GET /health is called
         Then: Should return 200 (if ML service available) or 503 (if not available)
@@ -364,12 +369,12 @@ class TestPredictionEndpointIntegration:
         # Assert - Accept both 200 (healthy) and 503 (degraded) in test environment
         assert response.status_code in [200, 503], \
             f"Health check should return 200 or 503, got {response.status_code}"
-        
+
         data = response.get_json()
         assert 'status' in data, "Health response should contain 'status' field"
-        # Status can be uppercase or lowercase depending on implementation
-        assert data['status'].lower() in ['healthy', 'degraded'], \
-            f"Status should be 'healthy' or 'degraded', got {data['status']}"
+        # Status can be HEALTHY, DEGRADED, or DOWN (uppercase format)
+        assert data['status'].upper() in ['HEALTHY', 'DEGRADED', 'DOWN'], \
+            f"Status should be 'HEALTHY', 'DEGRADED', or 'DOWN', got {data['status']}"
 
 
 class TestPredictionEndpointContractValidation:
@@ -396,12 +401,13 @@ class TestPredictionEndpointContractValidation:
     ):
         """
         Contract Test: Verify response contains all required fields.
-        
+
         This test ensures backward compatibility for API consumers.
         """
         # Arrange
         mock_predict.return_value = {"prediction": 0, "probability": 0.75}
-        future_date = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%S")
+        future_date = (datetime.now() + timedelta(days=1)
+                       ).strftime("%Y-%m-%dT%H:%M:%S")
         payload = {
             "flightNumber": "TEST123",
             "companyName": "TE",

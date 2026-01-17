@@ -5,1158 +5,1158 @@
     "concurrency": 5,
     "successful": 50,
     "failed": 0,
-    "total_time_s": 0.9160775149999836,
-    "avg_latency_s": 0.09023399678000942
+    "total_time_s": 4.301588151000033,
+    "avg_latency_s": 0.4206104239600063
   },
   "results": [
     {
       "status_code": 200,
-      "latency": 0.5456327560000318,
+      "latency": 0.3095086779999292,
       "payload": {
-        "flightNumber": "BA5420",
-        "companyName": "BA",
-        "flightOrigin": "MIA",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2025-12-29T23:06:50",
-        "flightDistance": 4479
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.005196954301046366,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.5196954301046366,
-        "formattedProbability": "0.52%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.52%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.5477390150000474,
-      "payload": {
-        "flightNumber": "AA1885",
-        "companyName": "AA",
-        "flightOrigin": "MIA",
+        "flightNumber": "LH4912",
+        "companyName": "LH",
+        "flightOrigin": "LAS",
         "flightDestination": "SFO",
-        "flightDepartureDate": "2025-12-31T03:36:50",
-        "flightDistance": 113
+        "flightDepartureDate": "2026-01-09T06:42:40",
+        "flightDistance": 1636
       },
       "response": {
         "prediction": "ON_TIME",
-        "probability": 0.015404256220418659,
+        "probability": 0.20365708615106556,
         "confidence": "VERY_LOW",
+        "probabilityPercentage": 20.365708615106556,
+        "formattedProbability": "20.37%",
         "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.540425622041866,
-        "formattedProbability": "1.54%",
         "highConfidence": false,
         "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.54%)"
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (20.37%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.5501688130000275,
+      "latency": 0.3097946080001748,
       "payload": {
-        "flightNumber": "UA1712",
+        "flightNumber": "AF6396",
+        "companyName": "AF",
+        "flightOrigin": "ATL",
+        "flightDestination": "ORD",
+        "flightDepartureDate": "2026-01-08T01:10:40",
+        "flightDistance": 1632
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.5447176808309829,
+        "confidence": "LOW",
+        "probabilityPercentage": 54.47176808309829,
+        "formattedProbability": "54.47%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be DELAYED with LOW confidence (54.47%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.3148965479999788,
+      "payload": {
+        "flightNumber": "DL998",
+        "companyName": "DL",
+        "flightOrigin": "ATL",
+        "flightDestination": "BOS",
+        "flightDepartureDate": "2026-01-11T08:14:40",
+        "flightDistance": 4435
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6713183200081931,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 67.13183200081932,
+        "formattedProbability": "67.13%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (67.13%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.3344823219999853,
+      "payload": {
+        "flightNumber": "LH164",
+        "companyName": "LH",
+        "flightOrigin": "DFW",
+        "flightDestination": "ORD",
+        "flightDepartureDate": "2026-01-05T22:50:40",
+        "flightDistance": 1290
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6215992929483286,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 62.159929294832864,
+        "formattedProbability": "62.16%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (62.16%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.2558917000001202,
+      "payload": {
+        "flightNumber": "AA6466",
+        "companyName": "AA",
+        "flightOrigin": "JFK",
+        "flightDestination": "SEA",
+        "flightDepartureDate": "2026-01-11T15:39:40",
+        "flightDistance": 2988
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.3758695107289224,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 37.58695107289224,
+        "formattedProbability": "37.59%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (37.59%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.3243827539999984,
+      "payload": {
+        "flightNumber": "UA6106",
         "companyName": "UA",
+        "flightOrigin": "LAX",
+        "flightDestination": "MIA",
+        "flightDepartureDate": "2026-01-09T01:10:40",
+        "flightDistance": 2808
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.2563571560911428,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 25.63571560911428,
+        "formattedProbability": "25.64%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (25.64%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.6354991019998124,
+      "payload": {
+        "flightNumber": "AA1730",
+        "companyName": "AA",
+        "flightOrigin": "JFK",
+        "flightDestination": "LAS",
+        "flightDepartureDate": "2026-01-09T14:36:40",
+        "flightDistance": 752
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.47539928800835424,
+        "confidence": "LOW",
+        "probabilityPercentage": 47.539928800835426,
+        "formattedProbability": "47.54%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with LOW confidence (47.54%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.34620026400034476,
+      "payload": {
+        "flightNumber": "BA4750",
+        "companyName": "BA",
+        "flightOrigin": "BOS",
+        "flightDestination": "ORD",
+        "flightDepartureDate": "2026-01-11T17:55:40",
+        "flightDistance": 2647
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6297690528325618,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 62.97690528325618,
+        "formattedProbability": "62.98%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (62.98%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.5477300059997106,
+      "payload": {
+        "flightNumber": "IB9756",
+        "companyName": "IB",
+        "flightOrigin": "SEA",
+        "flightDestination": "SFO",
+        "flightDepartureDate": "2026-01-07T02:13:40",
+        "flightDistance": 2134
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.684959896604482,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 68.4959896604482,
+        "formattedProbability": "68.50%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (68.50%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.32903004600029817,
+      "payload": {
+        "flightNumber": "AA3327",
+        "companyName": "AA",
+        "flightOrigin": "BOS",
+        "flightDestination": "DFW",
+        "flightDepartureDate": "2026-01-07T10:24:40",
+        "flightDistance": 4575
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6794301612070612,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 67.94301612070612,
+        "formattedProbability": "67.94%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (67.94%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.4311165570002231,
+      "payload": {
+        "flightNumber": "AA6459",
+        "companyName": "AA",
+        "flightOrigin": "SEA",
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-11T12:58:40",
+        "flightDistance": 1392
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.4813552126399221,
+        "confidence": "LOW",
+        "probabilityPercentage": 48.13552126399221,
+        "formattedProbability": "48.14%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with LOW confidence (48.14%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.4125059859998146,
+      "payload": {
+        "flightNumber": "IB1986",
+        "companyName": "IB",
+        "flightOrigin": "LAX",
+        "flightDestination": "LAS",
+        "flightDepartureDate": "2026-01-05T11:15:40",
+        "flightDistance": 4136
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6807543013270532,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 68.07543013270532,
+        "formattedProbability": "68.08%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (68.08%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.49325983800008544,
+      "payload": {
+        "flightNumber": "DL555",
+        "companyName": "DL",
         "flightOrigin": "BOS",
         "flightDestination": "JFK",
-        "flightDepartureDate": "2026-01-03T13:06:50",
-        "flightDistance": 3527
+        "flightDepartureDate": "2026-01-09T09:02:40",
+        "flightDistance": 1758
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.021413558392272443,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.1413558392272445,
-        "formattedProbability": "2.14%",
+        "prediction": "DELAYED",
+        "probability": 0.5533121862350439,
+        "confidence": "LOW",
+        "probabilityPercentage": 55.331218623504384,
+        "formattedProbability": "55.33%",
+        "confidenceLevel": "LOW",
         "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.14%)"
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with LOW confidence (55.33%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.5503760380000813,
+      "latency": 0.30760987699977704,
       "payload": {
-        "flightNumber": "AF53",
+        "flightNumber": "DL2980",
+        "companyName": "DL",
+        "flightOrigin": "MIA",
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-08T14:01:40",
+        "flightDistance": 316
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6062557490806884,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 60.625574908068835,
+        "formattedProbability": "60.63%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (60.63%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.4342352869998649,
+      "payload": {
+        "flightNumber": "LH4766",
+        "companyName": "LH",
+        "flightOrigin": "LAS",
+        "flightDestination": "ORD",
+        "flightDepartureDate": "2026-01-07T17:34:40",
+        "flightDistance": 655
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.18784001542885292,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 18.784001542885292,
+        "formattedProbability": "18.78%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (18.78%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.3608238120000351,
+      "payload": {
+        "flightNumber": "IB1719",
+        "companyName": "IB",
+        "flightOrigin": "LAS",
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-11T12:19:40",
+        "flightDistance": 766
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.2994221949632219,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 29.942219496322192,
+        "formattedProbability": "29.94%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (29.94%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.38997930000005,
+      "payload": {
+        "flightNumber": "IB2986",
+        "companyName": "IB",
+        "flightOrigin": "LAX",
+        "flightDestination": "DFW",
+        "flightDepartureDate": "2026-01-08T00:25:40",
+        "flightDistance": 1478
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.5230102651704323,
+        "confidence": "LOW",
+        "probabilityPercentage": 52.301026517043226,
+        "formattedProbability": "52.30%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be DELAYED with LOW confidence (52.30%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.2835975339999095,
+      "payload": {
+        "flightNumber": "AF5647",
         "companyName": "AF",
         "flightOrigin": "ORD",
-        "flightDestination": "SEA",
-        "flightDepartureDate": "2025-12-30T12:01:50",
-        "flightDistance": 3601
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-05T16:04:40",
+        "flightDistance": 3652
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.005660110286814728,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.5660110286814728,
-        "formattedProbability": "0.57%",
+        "prediction": "DELAYED",
+        "probability": 0.5633540434156874,
+        "confidence": "LOW",
+        "probabilityPercentage": 56.33540434156874,
+        "formattedProbability": "56.34%",
+        "confidenceLevel": "LOW",
         "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.57%)"
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with LOW confidence (56.34%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.555140022000046,
+      "latency": 0.3205369460001748,
       "payload": {
-        "flightNumber": "BA6068",
+        "flightNumber": "BA690",
         "companyName": "BA",
-        "flightOrigin": "SEA",
+        "flightOrigin": "LAS",
+        "flightDestination": "MIA",
+        "flightDepartureDate": "2026-01-10T06:51:40",
+        "flightDistance": 4726
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.050817099567099566,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 5.081709956709957,
+        "formattedProbability": "5.08%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (5.08%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.5267212809999364,
+      "payload": {
+        "flightNumber": "LH1372",
+        "companyName": "LH",
+        "flightOrigin": "LAX",
         "flightDestination": "JFK",
-        "flightDepartureDate": "2025-12-29T17:35:50",
-        "flightDistance": 3726
+        "flightDepartureDate": "2026-01-10T01:48:40",
+        "flightDistance": 1842
       },
       "response": {
         "prediction": "ON_TIME",
-        "probability": 0.004656630619913921,
+        "probability": 0.308061607307282,
         "confidence": "VERY_LOW",
+        "probabilityPercentage": 30.806160730728198,
+        "formattedProbability": "30.81%",
         "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.46566306199139207,
-        "formattedProbability": "0.47%",
         "highConfidence": false,
         "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.47%)"
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (30.81%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.03146446100004141,
+      "latency": 0.36216385399984574,
       "payload": {
-        "flightNumber": "IB5997",
-        "companyName": "IB",
-        "flightOrigin": "BOS",
-        "flightDestination": "ATL",
-        "flightDepartureDate": "2026-01-03T12:49:50",
-        "flightDistance": 3331
+        "flightNumber": "SW8664",
+        "companyName": "SW",
+        "flightOrigin": "SFO",
+        "flightDestination": "JFK",
+        "flightDepartureDate": "2026-01-12T04:15:40",
+        "flightDistance": 3559
       },
       "response": {
         "prediction": "ON_TIME",
-        "probability": 0.02300848174666299,
+        "probability": 0.14089475213014033,
         "confidence": "VERY_LOW",
+        "probabilityPercentage": 14.089475213014033,
+        "formattedProbability": "14.09%",
         "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.300848174666299,
-        "formattedProbability": "2.30%",
         "highConfidence": false,
         "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.30%)"
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (14.09%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.03264990700006365,
+      "latency": 0.5195518220002668,
       "payload": {
-        "flightNumber": "BA7856",
-        "companyName": "BA",
+        "flightNumber": "AA1651",
+        "companyName": "AA",
+        "flightOrigin": "SEA",
+        "flightDestination": "LAS",
+        "flightDepartureDate": "2026-01-11T16:00:40",
+        "flightDistance": 4614
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.5830803610533841,
+        "confidence": "LOW",
+        "probabilityPercentage": 58.30803610533841,
+        "formattedProbability": "58.31%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with LOW confidence (58.31%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.45389086799968936,
+      "payload": {
+        "flightNumber": "LH2353",
+        "companyName": "LH",
         "flightOrigin": "SEA",
         "flightDestination": "DFW",
-        "flightDepartureDate": "2026-01-01T10:06:50",
-        "flightDistance": 1399
+        "flightDepartureDate": "2026-01-06T05:14:40",
+        "flightDistance": 2540
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.01235074457803169,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.2350744578031692,
-        "formattedProbability": "1.24%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.24%)"
+        "prediction": "DELAYED",
+        "probability": 0.8534488388700838,
+        "confidence": "HIGH",
+        "probabilityPercentage": 85.34488388700838,
+        "formattedProbability": "85.34%",
+        "confidenceLevel": "HIGH",
+        "highConfidence": true,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with HIGH confidence (85.34%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.04125376199999664,
+      "latency": 0.3998644470002546,
       "payload": {
-        "flightNumber": "AA410",
-        "companyName": "AA",
+        "flightNumber": "UA8837",
+        "companyName": "UA",
+        "flightOrigin": "LAS",
+        "flightDestination": "JFK",
+        "flightDepartureDate": "2026-01-08T06:00:40",
+        "flightDistance": 4008
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.12034019184169589,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 12.034019184169589,
+        "formattedProbability": "12.03%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (12.03%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.4694327149995843,
+      "payload": {
+        "flightNumber": "IB9551",
+        "companyName": "IB",
+        "flightOrigin": "JFK",
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-05T17:54:40",
+        "flightDistance": 2435
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.39815158649349774,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 39.815158649349776,
+        "formattedProbability": "39.82%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (39.82%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.6470933290001994,
+      "payload": {
+        "flightNumber": "LH9558",
+        "companyName": "LH",
+        "flightOrigin": "BOS",
+        "flightDestination": "MIA",
+        "flightDepartureDate": "2026-01-08T22:27:40",
+        "flightDistance": 1338
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.5249434586332232,
+        "confidence": "LOW",
+        "probabilityPercentage": 52.49434586332232,
+        "formattedProbability": "52.49%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be DELAYED with LOW confidence (52.49%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.40051871599962396,
+      "payload": {
+        "flightNumber": "AF4130",
+        "companyName": "AF",
+        "flightOrigin": "DFW",
+        "flightDestination": "ORD",
+        "flightDepartureDate": "2026-01-11T08:54:40",
+        "flightDistance": 259
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.7883184928599072,
+        "confidence": "HIGH",
+        "probabilityPercentage": 78.83184928599071,
+        "formattedProbability": "78.83%",
+        "confidenceLevel": "HIGH",
+        "highConfidence": true,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with HIGH confidence (78.83%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.4908877860002576,
+      "payload": {
+        "flightNumber": "UA3881",
+        "companyName": "UA",
         "flightOrigin": "LAS",
         "flightDestination": "BOS",
-        "flightDepartureDate": "2026-01-02T11:39:50",
-        "flightDistance": 199
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.01837897814177153,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.837897814177153,
-        "formattedProbability": "1.84%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.84%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.050791332000017064,
-      "payload": {
-        "flightNumber": "IB3231",
-        "companyName": "IB",
-        "flightOrigin": "ATL",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2025-12-31T01:58:50",
+        "flightDepartureDate": "2026-01-10T19:32:40",
         "flightDistance": 2794
       },
       "response": {
         "prediction": "ON_TIME",
-        "probability": 0.006165705877880897,
+        "probability": 0.2925564063158262,
         "confidence": "VERY_LOW",
+        "probabilityPercentage": 29.25564063158262,
+        "formattedProbability": "29.26%",
         "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.6165705877880897,
-        "formattedProbability": "0.62%",
         "highConfidence": false,
         "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.62%)"
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (29.26%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.04255242099998213,
+      "latency": 0.4183203020002111,
       "payload": {
-        "flightNumber": "DL2625",
+        "flightNumber": "AA522",
+        "companyName": "AA",
+        "flightOrigin": "LAS",
+        "flightDestination": "DFW",
+        "flightDepartureDate": "2026-01-05T19:30:40",
+        "flightDistance": 4748
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.3003516228887646,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 30.03516228887646,
+        "formattedProbability": "30.04%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (30.04%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.6034545080001408,
+      "payload": {
+        "flightNumber": "AF5574",
+        "companyName": "AF",
+        "flightOrigin": "LAS",
+        "flightDestination": "SEA",
+        "flightDepartureDate": "2026-01-10T01:36:40",
+        "flightDistance": 902
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.4937156739575677,
+        "confidence": "LOW",
+        "probabilityPercentage": 49.37156739575677,
+        "formattedProbability": "49.37%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with LOW confidence (49.37%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.31412886700036324,
+      "payload": {
+        "flightNumber": "DL9746",
         "companyName": "DL",
+        "flightOrigin": "LAX",
+        "flightDestination": "DFW",
+        "flightDepartureDate": "2026-01-05T10:59:40",
+        "flightDistance": 2198
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6223440669157051,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 62.23440669157051,
+        "formattedProbability": "62.23%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (62.23%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.42965070099990044,
+      "payload": {
+        "flightNumber": "UA4108",
+        "companyName": "UA",
         "flightOrigin": "MIA",
         "flightDestination": "ATL",
-        "flightDepartureDate": "2026-01-05T21:32:50",
-        "flightDistance": 1521
+        "flightDepartureDate": "2026-01-11T10:56:40",
+        "flightDistance": 4241
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.00904778989681836,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.904778989681836,
-        "formattedProbability": "0.90%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.90%)"
+        "prediction": "DELAYED",
+        "probability": 0.7806464386484906,
+        "confidence": "HIGH",
+        "probabilityPercentage": 78.06464386484906,
+        "formattedProbability": "78.06%",
+        "confidenceLevel": "HIGH",
+        "highConfidence": true,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with HIGH confidence (78.06%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.03352331300004607,
+      "latency": 0.4838884459995825,
       "payload": {
-        "flightNumber": "UA6904",
-        "companyName": "UA",
-        "flightOrigin": "ATL",
-        "flightDestination": "SFO",
-        "flightDepartureDate": "2025-12-31T13:42:50",
-        "flightDistance": 1506
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.0045700151151992436,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.45700151151992435,
-        "formattedProbability": "0.46%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.46%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.03304875600008472,
-      "payload": {
-        "flightNumber": "SW9063",
+        "flightNumber": "SW9035",
         "companyName": "SW",
-        "flightOrigin": "LAS",
-        "flightDestination": "LAX",
-        "flightDepartureDate": "2025-12-30T10:23:50",
-        "flightDistance": 4977
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.005042862396104359,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.5042862396104358,
-        "formattedProbability": "0.50%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.50%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.023377268999979606,
-      "payload": {
-        "flightNumber": "DL715",
-        "companyName": "DL",
-        "flightOrigin": "ATL",
-        "flightDestination": "MIA",
-        "flightDepartureDate": "2026-01-04T11:43:50",
-        "flightDistance": 665
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.02853917731764822,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.853917731764822,
-        "formattedProbability": "2.85%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.85%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.03199722700003349,
-      "payload": {
-        "flightNumber": "AF1820",
-        "companyName": "AF",
-        "flightOrigin": "SEA",
-        "flightDestination": "LAX",
-        "flightDepartureDate": "2025-12-31T19:12:50",
-        "flightDistance": 3119
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.0035870211715365065,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.35870211715365063,
-        "formattedProbability": "0.36%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.36%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.041715619000001425,
-      "payload": {
-        "flightNumber": "LH5347",
-        "companyName": "LH",
-        "flightOrigin": "BOS",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2026-01-04T20:22:50",
-        "flightDistance": 3430
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.01669151424770942,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.669151424770942,
-        "formattedProbability": "1.67%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.67%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.02986976500005767,
-      "payload": {
-        "flightNumber": "AF505",
-        "companyName": "AF",
-        "flightOrigin": "BOS",
-        "flightDestination": "LAX",
-        "flightDepartureDate": "2026-01-04T03:24:50",
-        "flightDistance": 474
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.02599025660923658,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.599025660923658,
-        "formattedProbability": "2.60%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.60%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.02852090000010321,
-      "payload": {
-        "flightNumber": "BA1860",
-        "companyName": "BA",
-        "flightOrigin": "DFW",
-        "flightDestination": "ORD",
-        "flightDepartureDate": "2025-12-30T01:05:50",
-        "flightDistance": 1812
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.007571043952036267,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.7571043952036267,
-        "formattedProbability": "0.76%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.76%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.02624262099993757,
-      "payload": {
-        "flightNumber": "IB1694",
-        "companyName": "IB",
-        "flightOrigin": "DFW",
-        "flightDestination": "SEA",
-        "flightDepartureDate": "2026-01-04T11:54:50",
-        "flightDistance": 3138
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.02853917731764822,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.853917731764822,
-        "formattedProbability": "2.85%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.85%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.041751123000040025,
-      "payload": {
-        "flightNumber": "AA1792",
-        "companyName": "AA",
-        "flightOrigin": "DFW",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2026-01-03T14:21:50",
-        "flightDistance": 1515
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.02337901427077185,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.3379014270771847,
-        "formattedProbability": "2.34%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.34%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.03836040700002741,
-      "payload": {
-        "flightNumber": "AA8565",
-        "companyName": "AA",
         "flightOrigin": "JFK",
-        "flightDestination": "ORD",
-        "flightDepartureDate": "2026-01-04T00:11:50",
-        "flightDistance": 3211
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.024039315639729532,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.4039315639729533,
-        "formattedProbability": "2.40%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.40%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.03804016800006593,
-      "payload": {
-        "flightNumber": "AA9584",
-        "companyName": "AA",
-        "flightOrigin": "ATL",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2026-01-03T09:49:50",
-        "flightDistance": 1547
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.017205551239450292,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.7205551239450292,
-        "formattedProbability": "1.72%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.72%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.037743830999943384,
-      "payload": {
-        "flightNumber": "AF680",
-        "companyName": "AF",
-        "flightOrigin": "ORD",
-        "flightDestination": "SEA",
-        "flightDepartureDate": "2026-01-03T21:37:50",
-        "flightDistance": 2209
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.014602352024841093,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.4602352024841094,
-        "formattedProbability": "1.46%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.46%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.036075627000059285,
-      "payload": {
-        "flightNumber": "AF2418",
-        "companyName": "AF",
-        "flightOrigin": "ORD",
-        "flightDestination": "MIA",
-        "flightDepartureDate": "2026-01-03T16:44:50",
-        "flightDistance": 181
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.015243382885325122,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.5243382885325123,
-        "formattedProbability": "1.52%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.52%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.05090914699997029,
-      "payload": {
-        "flightNumber": "IB2365",
-        "companyName": "IB",
-        "flightOrigin": "JFK",
-        "flightDestination": "SEA",
-        "flightDepartureDate": "2026-01-04T12:30:50",
-        "flightDistance": 582
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.030489806168011818,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 3.048980616801182,
-        "formattedProbability": "3.05%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (3.05%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.034684355999957006,
-      "payload": {
-        "flightNumber": "UA4620",
-        "companyName": "UA",
-        "flightOrigin": "MIA",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2025-12-30T09:19:50",
-        "flightDistance": 1763
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.005110719638995564,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.5110719638995563,
-        "formattedProbability": "0.51%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.51%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.027363358000002336,
-      "payload": {
-        "flightNumber": "AA3284",
-        "companyName": "AA",
-        "flightOrigin": "JFK",
-        "flightDestination": "SEA",
-        "flightDepartureDate": "2026-01-01T00:03:50",
-        "flightDistance": 2248
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.008347856187909605,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.8347856187909606,
-        "formattedProbability": "0.83%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.83%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.052032684999971934,
-      "payload": {
-        "flightNumber": "DL4966",
-        "companyName": "DL",
-        "flightOrigin": "ATL",
         "flightDestination": "DFW",
-        "flightDepartureDate": "2026-01-05T12:07:50",
-        "flightDistance": 2267
+        "flightDepartureDate": "2026-01-06T13:55:40",
+        "flightDistance": 244
       },
       "response": {
         "prediction": "ON_TIME",
-        "probability": 0.013105443207593681,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.310544320759368,
-        "formattedProbability": "1.31%",
+        "probability": 0.47015766065710685,
+        "confidence": "LOW",
+        "probabilityPercentage": 47.015766065710686,
+        "formattedProbability": "47.02%",
+        "confidenceLevel": "LOW",
         "highConfidence": false,
         "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.31%)"
+        "summary": "Flight is predicted to be ON_TIME with LOW confidence (47.02%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.05547800800002278,
+      "latency": 0.6076583529998061,
       "payload": {
-        "flightNumber": "SW2540",
-        "companyName": "SW",
-        "flightOrigin": "ATL",
-        "flightDestination": "BOS",
-        "flightDepartureDate": "2026-01-03T21:43:50",
-        "flightDistance": 1227
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.014602352024841093,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.4602352024841094,
-        "formattedProbability": "1.46%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.46%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.05075642799999969,
-      "payload": {
-        "flightNumber": "LH3846",
-        "companyName": "LH",
-        "flightOrigin": "ATL",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2025-12-31T15:55:50",
-        "flightDistance": 1548
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.00342440226340481,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.342440226340481,
-        "formattedProbability": "0.34%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.34%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.0437352669999882,
-      "payload": {
-        "flightNumber": "AA3933",
-        "companyName": "AA",
-        "flightOrigin": "BOS",
-        "flightDestination": "ORD",
-        "flightDepartureDate": "2026-01-03T10:23:50",
-        "flightDistance": 3664
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.01857028016458814,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.857028016458814,
-        "formattedProbability": "1.86%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.86%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.06038610999996763,
-      "payload": {
-        "flightNumber": "UA4767",
-        "companyName": "UA",
-        "flightOrigin": "BOS",
-        "flightDestination": "JFK",
-        "flightDepartureDate": "2026-01-03T08:51:50",
-        "flightDistance": 3400
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.017632786989375857,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.7632786989375857,
-        "formattedProbability": "1.76%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.76%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.049046418999978414,
-      "payload": {
-        "flightNumber": "BA5213",
-        "companyName": "BA",
-        "flightOrigin": "BOS",
-        "flightDestination": "SFO",
-        "flightDepartureDate": "2026-01-02T04:34:50",
-        "flightDistance": 4627
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.013111129757179325,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.3111129757179325,
-        "formattedProbability": "1.31%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.31%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.051315797000029306,
-      "payload": {
-        "flightNumber": "DL3219",
+        "flightNumber": "DL5213",
         "companyName": "DL",
-        "flightOrigin": "SEA",
-        "flightDestination": "MIA",
-        "flightDepartureDate": "2026-01-03T21:34:50",
-        "flightDistance": 3939
+        "flightOrigin": "BOS",
+        "flightDestination": "DFW",
+        "flightDepartureDate": "2026-01-12T04:04:40",
+        "flightDistance": 2800
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.014602352024841093,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.4602352024841094,
-        "formattedProbability": "1.46%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.46%)"
+        "prediction": "DELAYED",
+        "probability": 0.7764144670611508,
+        "confidence": "HIGH",
+        "probabilityPercentage": 77.64144670611508,
+        "formattedProbability": "77.64%",
+        "confidenceLevel": "HIGH",
+        "highConfidence": true,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with HIGH confidence (77.64%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.047022569999967345,
+      "latency": 0.44487031399967236,
       "payload": {
-        "flightNumber": "IB7391",
-        "companyName": "IB",
-        "flightOrigin": "ORD",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2026-01-01T08:38:50",
-        "flightDistance": 391
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.021144767748675616,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.1144767748675615,
-        "formattedProbability": "2.11%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.11%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.028634713999963424,
-      "payload": {
-        "flightNumber": "UA4200",
-        "companyName": "UA",
-        "flightOrigin": "ORD",
-        "flightDestination": "SFO",
-        "flightDepartureDate": "2026-01-03T10:03:50",
-        "flightDistance": 2942
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.01857028016458814,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.857028016458814,
-        "formattedProbability": "1.86%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.86%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.04774585899997419,
-      "payload": {
-        "flightNumber": "UA4748",
-        "companyName": "UA",
-        "flightOrigin": "SEA",
-        "flightDestination": "LAX",
-        "flightDepartureDate": "2026-01-02T23:41:50",
-        "flightDistance": 827
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.0063110580466762215,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.6311058046676221,
-        "formattedProbability": "0.63%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.63%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.03205473399998482,
-      "payload": {
-        "flightNumber": "DL1968",
-        "companyName": "DL",
-        "flightOrigin": "DFW",
-        "flightDestination": "LAX",
-        "flightDepartureDate": "2025-12-31T13:44:50",
-        "flightDistance": 1581
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.0045700151151992436,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.45700151151992435,
-        "formattedProbability": "0.46%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.46%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.038015865000033955,
-      "payload": {
-        "flightNumber": "IB9526",
-        "companyName": "IB",
-        "flightOrigin": "SEA",
-        "flightDestination": "SFO",
-        "flightDepartureDate": "2025-12-30T08:32:50",
-        "flightDistance": 2953
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.005038078778752,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.5038078778752,
-        "formattedProbability": "0.50%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.50%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.029518222999968202,
-      "payload": {
-        "flightNumber": "AF3945",
+        "flightNumber": "AF7415",
         "companyName": "AF",
-        "flightOrigin": "ORD",
-        "flightDestination": "SFO",
-        "flightDepartureDate": "2026-01-03T20:56:50",
-        "flightDistance": 3338
+        "flightOrigin": "MIA",
+        "flightDestination": "ORD",
+        "flightDepartureDate": "2026-01-09T14:29:40",
+        "flightDistance": 99
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.018003739869229003,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.8003739869229003,
-        "formattedProbability": "1.80%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.80%)"
+        "prediction": "DELAYED",
+        "probability": 0.7904889103616539,
+        "confidence": "HIGH",
+        "probabilityPercentage": 79.04889103616539,
+        "formattedProbability": "79.05%",
+        "confidenceLevel": "HIGH",
+        "highConfidence": true,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with HIGH confidence (79.05%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.04503972700001668,
+      "latency": 0.5345993149999231,
       "payload": {
-        "flightNumber": "IB68",
-        "companyName": "IB",
+        "flightNumber": "UA4374",
+        "companyName": "UA",
+        "flightOrigin": "LAX",
+        "flightDestination": "BOS",
+        "flightDepartureDate": "2026-01-05T16:35:40",
+        "flightDistance": 2453
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6669028658621015,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 66.69028658621015,
+        "formattedProbability": "66.69%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (66.69%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.5062879170000087,
+      "payload": {
+        "flightNumber": "AF6873",
+        "companyName": "AF",
+        "flightOrigin": "ATL",
+        "flightDestination": "MIA",
+        "flightDepartureDate": "2026-01-11T02:09:40",
+        "flightDistance": 862
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.46267392141862457,
+        "confidence": "LOW",
+        "probabilityPercentage": 46.26739214186246,
+        "formattedProbability": "46.27%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with LOW confidence (46.27%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.45601159300031213,
+      "payload": {
+        "flightNumber": "BA6938",
+        "companyName": "BA",
+        "flightOrigin": "LAS",
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-05T11:53:40",
+        "flightDistance": 1164
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.300243162927035,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 30.024316292703503,
+        "formattedProbability": "30.02%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (30.02%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.3771333400000003,
+      "payload": {
+        "flightNumber": "DL7118",
+        "companyName": "DL",
+        "flightOrigin": "ATL",
+        "flightDestination": "SFO",
+        "flightDepartureDate": "2026-01-07T15:47:40",
+        "flightDistance": 4033
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.4493057412742719,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 44.93057412742719,
+        "formattedProbability": "44.93%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (44.93%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.3063972479999393,
+      "payload": {
+        "flightNumber": "UA2783",
+        "companyName": "UA",
         "flightOrigin": "JFK",
-        "flightDestination": "MIA",
-        "flightDepartureDate": "2025-12-29T09:28:50",
-        "flightDistance": 1664
+        "flightDestination": "LAS",
+        "flightDepartureDate": "2026-01-08T09:49:40",
+        "flightDistance": 4426
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.004658482635915218,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.4658482635915218,
-        "formattedProbability": "0.47%",
+        "prediction": "DELAYED",
+        "probability": 0.6611268201055015,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 66.11268201055015,
+        "formattedProbability": "66.11%",
+        "confidenceLevel": "MEDIUM",
         "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.47%)"
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (66.11%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.04522214899998289,
+      "latency": 0.31793207000009716,
       "payload": {
-        "flightNumber": "IB1035",
-        "companyName": "IB",
-        "flightOrigin": "ATL",
-        "flightDestination": "JFK",
-        "flightDepartureDate": "2026-01-03T17:31:50",
-        "flightDistance": 410
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.021786116816016474,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 2.1786116816016476,
-        "formattedProbability": "2.18%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (2.18%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.04541497299999264,
-      "payload": {
-        "flightNumber": "IB5771",
-        "companyName": "IB",
+        "flightNumber": "AF7001",
+        "companyName": "AF",
         "flightOrigin": "BOS",
-        "flightDestination": "LAX",
-        "flightDepartureDate": "2026-01-05T06:08:50",
-        "flightDistance": 4580
+        "flightDestination": "DFW",
+        "flightDepartureDate": "2026-01-12T15:01:40",
+        "flightDistance": 570
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.007744849106730563,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.7744849106730562,
-        "formattedProbability": "0.77%",
+        "prediction": "DELAYED",
+        "probability": 0.7053481691065429,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 70.53481691065429,
+        "formattedProbability": "70.53%",
+        "confidenceLevel": "MEDIUM",
         "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.77%)"
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (70.53%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.04419542300001922,
+      "latency": 0.3936174850000498,
       "payload": {
-        "flightNumber": "LH6475",
+        "flightNumber": "SW2525",
+        "companyName": "SW",
+        "flightOrigin": "ORD",
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-08T21:52:40",
+        "flightDistance": 1906
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6643243037542962,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 66.43243037542962,
+        "formattedProbability": "66.43%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (66.43%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.38241419800033327,
+      "payload": {
+        "flightNumber": "AF8043",
+        "companyName": "AF",
+        "flightOrigin": "DFW",
+        "flightDestination": "BOS",
+        "flightDepartureDate": "2026-01-08T15:13:40",
+        "flightDistance": 950
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6909526680376108,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 69.09526680376108,
+        "formattedProbability": "69.10%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (69.10%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.32799283600024864,
+      "payload": {
+        "flightNumber": "LH7842",
         "companyName": "LH",
         "flightOrigin": "DFW",
-        "flightDestination": "LAS",
-        "flightDepartureDate": "2025-12-31T09:15:50",
-        "flightDistance": 1047
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.004374211258501815,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.4374211258501815,
-        "formattedProbability": "0.44%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.44%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.03629265300003226,
-      "payload": {
-        "flightNumber": "DL9538",
-        "companyName": "DL",
-        "flightOrigin": "LAS",
-        "flightDestination": "ORD",
-        "flightDepartureDate": "2025-12-29T14:54:50",
-        "flightDistance": 419
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.006275543926353424,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.6275543926353424,
-        "formattedProbability": "0.63%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.63%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.028147954000019126,
-      "payload": {
-        "flightNumber": "DL7300",
-        "companyName": "DL",
-        "flightOrigin": "LAS",
-        "flightDestination": "ORD",
-        "flightDepartureDate": "2025-12-29T04:52:50",
-        "flightDistance": 4578
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.004008778394481252,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.40087783944812516,
-        "formattedProbability": "0.40%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.40%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.04097482800000307,
-      "payload": {
-        "flightNumber": "AF1514",
-        "companyName": "AF",
-        "flightOrigin": "SFO",
-        "flightDestination": "BOS",
-        "flightDepartureDate": "2026-01-05T12:35:50",
-        "flightDistance": 2668
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.013105443207593681,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.310544320759368,
-        "formattedProbability": "1.31%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.31%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.03573808499993447,
-      "payload": {
-        "flightNumber": "BA7116",
-        "companyName": "BA",
-        "flightOrigin": "SEA",
         "flightDestination": "LAX",
-        "flightDepartureDate": "2026-01-02T05:55:50",
-        "flightDistance": 3852
+        "flightDepartureDate": "2026-01-08T18:06:40",
+        "flightDistance": 4729
       },
       "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.010196981574369404,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 1.0196981574369404,
-        "formattedProbability": "1.02%",
+        "prediction": "DELAYED",
+        "probability": 0.6115172613686106,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 61.151726136861065,
+        "formattedProbability": "61.15%",
+        "confidenceLevel": "MEDIUM",
         "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (1.02%)"
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (61.15%)"
       }
     },
     {
       "status_code": 200,
-      "latency": 0.04109784299998864,
+      "latency": 0.3520241800001713,
       "payload": {
-        "flightNumber": "BA6295",
-        "companyName": "BA",
+        "flightNumber": "UA8648",
+        "companyName": "UA",
+        "flightOrigin": "ORD",
+        "flightDestination": "MIA",
+        "flightDepartureDate": "2026-01-09T06:54:40",
+        "flightDistance": 1195
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.6531538053197126,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 65.31538053197126,
+        "formattedProbability": "65.32%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (65.32%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.4535846359999596,
+      "payload": {
+        "flightNumber": "LH5470",
+        "companyName": "LH",
+        "flightOrigin": "ATL",
+        "flightDestination": "LAX",
+        "flightDepartureDate": "2026-01-11T00:00:40",
+        "flightDistance": 1141
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.534250421363917,
+        "confidence": "LOW",
+        "probabilityPercentage": 53.425042136391696,
+        "formattedProbability": "53.43%",
+        "confidenceLevel": "LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be DELAYED with LOW confidence (53.43%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.5471274429996811,
+      "payload": {
+        "flightNumber": "DL8147",
+        "companyName": "DL",
+        "flightOrigin": "ATL",
+        "flightDestination": "ORD",
+        "flightDepartureDate": "2026-01-08T19:57:40",
+        "flightDistance": 3105
+      },
+      "response": {
+        "prediction": "ON_TIME",
+        "probability": 0.3568082011214934,
+        "confidence": "VERY_LOW",
+        "probabilityPercentage": 35.68082011214934,
+        "formattedProbability": "35.68%",
+        "confidenceLevel": "VERY_LOW",
+        "highConfidence": false,
+        "lowConfidence": true,
+        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (35.68%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.43787717200029874,
+      "payload": {
+        "flightNumber": "SW8842",
+        "companyName": "SW",
+        "flightOrigin": "DFW",
+        "flightDestination": "JFK",
+        "flightDepartureDate": "2026-01-10T15:18:40",
+        "flightDistance": 4032
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.649577254608007,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 64.9577254608007,
+        "formattedProbability": "64.96%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (64.96%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.4974704839996775,
+      "payload": {
+        "flightNumber": "UA3057",
+        "companyName": "UA",
+        "flightOrigin": "ORD",
+        "flightDestination": "JFK",
+        "flightDepartureDate": "2026-01-05T15:01:40",
+        "flightDistance": 306
+      },
+      "response": {
+        "prediction": "DELAYED",
+        "probability": 0.7018062321495446,
+        "confidence": "MEDIUM",
+        "probabilityPercentage": 70.18062321495447,
+        "formattedProbability": "70.18%",
+        "confidenceLevel": "MEDIUM",
+        "highConfidence": false,
+        "lowConfidence": false,
+        "summary": "Flight is predicted to be DELAYED with MEDIUM confidence (70.18%)"
+      }
+    },
+    {
+      "status_code": 200,
+      "latency": 0.42687380699999267,
+      "payload": {
+        "flightNumber": "DL7501",
+        "companyName": "DL",
         "flightOrigin": "LAX",
         "flightDestination": "SEA",
-        "flightDepartureDate": "2026-01-01T00:13:50",
-        "flightDistance": 3266
+        "flightDepartureDate": "2026-01-08T21:09:40",
+        "flightDistance": 2796
       },
       "response": {
         "prediction": "ON_TIME",
-        "probability": 0.008347856187909605,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.8347856187909606,
-        "formattedProbability": "0.83%",
+        "probability": 0.4954487924143682,
+        "confidence": "LOW",
+        "probabilityPercentage": 49.54487924143682,
+        "formattedProbability": "49.54%",
+        "confidenceLevel": "LOW",
         "highConfidence": false,
         "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.83%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.033233878000032746,
-      "payload": {
-        "flightNumber": "UA721",
-        "companyName": "UA",
-        "flightOrigin": "JFK",
-        "flightDestination": "SFO",
-        "flightDepartureDate": "2025-12-30T22:40:50",
-        "flightDistance": 4851
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.0041960955024731485,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.41960955024731483,
-        "formattedProbability": "0.42%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.42%)"
-      }
-    },
-    {
-      "status_code": 200,
-      "latency": 0.029607632999955058,
-      "payload": {
-        "flightNumber": "AA5351",
-        "companyName": "AA",
-        "flightOrigin": "MIA",
-        "flightDestination": "ORD",
-        "flightDepartureDate": "2025-12-29T05:47:50",
-        "flightDistance": 763
-      },
-      "response": {
-        "prediction": "ON_TIME",
-        "probability": 0.003862082650401605,
-        "confidence": "VERY_LOW",
-        "confidenceLevel": "VERY_LOW",
-        "probabilityPercentage": 0.38620826504016054,
-        "formattedProbability": "0.39%",
-        "highConfidence": false,
-        "lowConfidence": true,
-        "summary": "Flight is predicted to be ON_TIME with VERY_LOW confidence (0.39%)"
+        "summary": "Flight is predicted to be ON_TIME with LOW confidence (49.54%)"
       }
     }
   ]

@@ -61,6 +61,20 @@ services:
     networks:
       - fot-network
 
+  # Frontend - Nginx serving static files
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - fot-api
+    networks:
+      - fot-network
+
   # Mock ML Service (for testing without real ML service)
   # Comment out or remove when using real ML service
   ml-service:
