@@ -22,17 +22,17 @@ public final class ValidationConstants {
 
     /**
      * Pattern for flight number validation.
-     * Format: 2-3 uppercase letters (airline code) + 1-4 digits (flight number)
-     * Examples: AA1234, BA101, LH456
+     * Format: 2-3 uppercase letters/digits (airline code) + 1-4 digits (flight number)
+     * Examples: AA1234, BA101, LH456, G31234
      */
-    public static final String FLIGHT_NUMBER_PATTERN = "^[A-Z]{2,3}\\d{1,4}$";
+    public static final String FLIGHT_NUMBER_PATTERN = "^[A-Z0-9]{2,3}\\d{1,4}$";
 
     /**
      * Pattern for airline IATA code validation.
-     * Format: 2-3 uppercase letters
-     * Examples: AA, BA, AZ, LH
+     * Format: 2-3 uppercase letters or alphanumeric characters
+     * Examples: AA, BA, AZ, LH, G3 (GOL)
      */
-    public static final String AIRLINE_CODE_PATTERN = "^[A-Z]{2,3}$";
+    public static final String AIRLINE_CODE_PATTERN = "^[A-Z0-9]{2,3}$";
 
     /**
      * Pattern for airport IATA code validation.
@@ -69,12 +69,12 @@ public final class ValidationConstants {
 
     public static final String FLIGHT_NUMBER_REQUIRED_MSG = "Flight number is required";
     public static final String FLIGHT_NUMBER_INVALID_MSG = 
-        "Flight number must be in format: 2-3 uppercase letters + 1-4 digits (e.g., AA1234)";
+        "Flight number must be in format: 2-3 uppercase letters/digits + 1-4 digits (e.g., AA1234, G31234)";
     public static final String FLIGHT_NUMBER_SIZE_MSG = 
         "Flight number must be between " + FLIGHT_NUMBER_MIN_LENGTH + " and " + FLIGHT_NUMBER_MAX_LENGTH + " characters";
 
     public static final String AIRLINE_CODE_REQUIRED_MSG = "Airline company code is required";
-    public static final String AIRLINE_CODE_INVALID_MSG = "Airline code must be 2 or 3 uppercase letters";
+    public static final String AIRLINE_CODE_INVALID_MSG = "Airline code must be 2 or 3 uppercase letters or alphanumeric characters (e.g., AA, G3)";
     public static final String AIRLINE_CODE_SIZE_MSG = 
         "Airline code must be between " + AIRLINE_CODE_MIN_LENGTH + " and " + AIRLINE_CODE_MAX_LENGTH + " characters";
 
@@ -104,8 +104,8 @@ public final class ValidationConstants {
     // ==================== SWAGGER DESCRIPTIONS ====================
 
     public static final String FLIGHT_NUMBER_DESC = 
-        "Flight number in format: airline code (2-3 letters) + flight number (1-4 digits)";
-    public static final String AIRLINE_CODE_DESC = "Airline IATA code (2 or 3 uppercase letters)";
+        "Flight number in format: airline code (2-3 letters/digits) + flight number (1-4 digits)";
+    public static final String AIRLINE_CODE_DESC = "Airline IATA code (2 or 3 uppercase letters or alphanumeric, e.g., AA, G3)";
     public static final String AIRPORT_ORIGIN_DESC = "Origin airport IATA code (3 uppercase letters)";
     public static final String AIRPORT_DESTINATION_DESC = "Destination airport IATA code (3 uppercase letters)";
     public static final String DEPARTURE_DATE_DESC = 

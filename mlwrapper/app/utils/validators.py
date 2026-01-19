@@ -22,7 +22,7 @@ def validate_airport_code(code: str) -> bool:
 
 def validate_airline_code(code: str) -> bool:
     """
-    Validate airline code format (IATA 2-letter code)
+    Validate airline code format (IATA 2-3 character code, alphanumeric)
 
     Args:
         code: Airline code to validate
@@ -30,9 +30,9 @@ def validate_airline_code(code: str) -> bool:
     Returns:
         True if valid, False otherwise
     """
-    if not code or len(code) != 2:
+    if not code or len(code) < 2 or len(code) > 3:
         return False
-    return code.isalpha() and code.isupper()
+    return code.isalnum() and code.isupper()
 
 
 def validate_flight_number(number: str) -> bool:
